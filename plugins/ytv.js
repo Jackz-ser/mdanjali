@@ -1,10 +1,11 @@
 let { ytv } = require("../lib");
 module.exports = {
   name: "ytv",
-  alias: ["ytmp4", "ytvideo"],
+  alias: ["ytmp4", "ytvideo", "video"],
   category: "Downloader",
-  desc: "Yotube To Mp4",
-  query: "Give A url",
+  desc: "Youtube To Mp4",
+  query: "_Give an url_",
+  isQuoted:true,
   wait: true,
   isUrl: true,
   async mbb({ msg, conn }, { q }) {
