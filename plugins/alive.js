@@ -5,6 +5,6 @@ module.exports = {
 	desc: "Is bot alive",
     query:'I am Alive Broo',
 	async mbb({ msg,conn },{q}) {
-conn.sendMessage(msg.from,{text: I AM ALIVE})      
+conn.sendMessage(msg.from,{text: "I AM ALIVE"})      
 	}
 }
