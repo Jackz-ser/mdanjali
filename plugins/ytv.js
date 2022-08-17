@@ -5,7 +5,6 @@ module.exports = {
   category: "Downloader",
   desc: "Youtube To Mp4",
   query: "_Give an url_",
-  isQuoted:true,
   wait: true,
   isUrl: true,
   async mbb({ msg, conn }, { q }) {
