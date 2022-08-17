@@ -15,10 +15,10 @@ module.exports = {
     if (q === "now") {
       if (commits.total === 0)
         return await conn.sendMessage(msg.from, {
-          text: tiny("You have the latest version installed"),
+          text: ("_*BOT IS UPTO DATE*_"),
         });
       var app = await heroku.get("/apps/" + config.HEROKU_APP_NAME);
-      await conn.sendMessage(msg.from, { text: "*ᴜᴘᴅᴀᴛɪɴɢ...*" });
+      await conn.sendMessage(msg.from, { text: "_UPDATE STARTED..._" });
       git.fetch("upstream", config.BRANCH);
       git.reset("hard", ["FETCH_HEAD"]);
       var git_url = app.git_url.replace(
@@ -34,9 +34,9 @@ module.exports = {
 
         await git.push("heroku", config.BRANCH);
 
-        await conn.sendMessage(msg.from, { text: "*Updated...*" });
+        await conn.sendMessage(msg.from, { text: "_UPDATE FINISHED_" });
 
-        await conn.sendMessage(msg.from, { text: "Restarting..." });
+        await conn.sendMessage(msg.from, { text: "_RESTARTING_" });
       } catch (e) {
         msg.reply(e);
       }
@@ -44,10 +44,10 @@ module.exports = {
 
     if (commits.total === 0) {
       await conn.sendMessage(msg.from, {
-        text: tiny("You have the latest version installed"),
+        text: ("_*BOT IS UPTO DATE*_"),
       });
     } else {
-      var availupdate = "*ᴜᴘᴅᴀᴛᴇs ᴀᴠᴀɪʟᴀʙʟᴇ* \n\n";
+      var availupdate = "*UPDATES AVAILABLE* \n\n";
       commits["all"].map((commit, num) => {
         availupdate += num + 1 + " ●  " + tiny(commit.message) + "\n";
       });
