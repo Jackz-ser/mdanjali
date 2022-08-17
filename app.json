@@ -1,12 +1,14 @@
 {
 	"name": "Anjali-MD",
-        "logo": "https://i.imgur.com/d1Wtdep.jpeg"
 	"description": " Whatsapp bot.",
 	"keywords": [
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/Jackz-ser/Anjali-MD",
+        "website": "https://github.com/Jackz-ser/Anjali-MD",
+        "repository": "https://github.com/Jackz-ser/Anjali-MD",
+        "logo": "https://i.imgur.com/d1Wtdep.jpeg",
+        "success_url": "https://github.com/Jackz-ser/Anjali-MD",
 	"stack": "container",
 	"env": {
 		"THUMBNAIL_IMAGE": {
