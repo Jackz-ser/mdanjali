@@ -7,6 +7,6 @@ if(!fs.existsSync(ssname)){
     MakeSession(config.Session_Id,ssname)
     }
 
-console.log("Starting...");
+console.log("ANJALI STARTING...");
 
 StartMillie("./lib");
