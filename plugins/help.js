@@ -57,7 +57,7 @@ module.exports = {
       }
       let str =
         "```" +
-        `╭══════ MILLIE ══════⊷
+        `╭══════ ANJALI ══════⊷
 ┃ ╭──────────────
 ┃ │ Prefix : ${prefix}
 ┃ │ User : ${msg.pushName}
@@ -105,7 +105,7 @@ ${readMore}
 					caption: tiny(str),
 					gifPlayback: true,
 				},
-				{ quoted: msg ,adReply:false }
+				{ quoted: msg ,adReply:true }
 			);
     }
   },
