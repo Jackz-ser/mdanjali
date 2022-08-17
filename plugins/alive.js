@@ -3,6 +3,6 @@ module.exports = {
   category: "ignore",
   desc: "Is bot alive"
   } async mbb({ msg }) {
-  	conn.sendMessage(msg.from, {
+     await conn.sendMessage(msg.from, {
           text: ("I AM ALIVE"),
           }});
