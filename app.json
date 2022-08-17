@@ -5,7 +5,7 @@
 		"whatsapp",
 		"bot"
 	],
-	"repository": "https://github.com/Jackz-ser/Anjali-md",
+	"repository": "https://github.com/Jackz-ser/Anjali-MD",
 	"stack": "container",
 	"env": {
 		"THUMBNAIL_IMAGE": {
