@@ -80,7 +80,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
             chalk.green.bold('Meenu mwol working' ));
             }
           
-	   try {
+      try {
         await conn.connect();
     } catch {
         if (!nodb) {
