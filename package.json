@@ -12,8 +12,11 @@
     "@adiwajshing/baileys": "github:adiwajshing/Baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@neeraj-x0/textpro": "1.0.3",
+    "dotenv": "^8.2.0",
+    "got": "^11.8.2",
     "millie-md": "1.0.8",
     "sequelize": "^6.21.3",
+    "sqlite3": "5.0.0",
     "translatte": "^3.0.1"
   },
   "description": " multi-device Whatsapp  Bot using Javascript",
