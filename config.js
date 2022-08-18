@@ -27,8 +27,7 @@ module.exports = {
   DB_URL:process.env.DATABASE_URL,
   BRANCH: "main",
   AI : process.env.AI||false
-
-    DATABASE_URL: DATABASE_URL,
-    DATABASE: DATABASE_URL === './anjali.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-    DEBUG: DEBUG,
-};
+  DATABASE_URL: DATABASE_URL,
+  DATABASE: DATABASE_URL === './anjali.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
+  DEBUG: DEBUG,
+  };
