@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const config = require('./config');
 const simpleGit = require('simple-git');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
+conts makeWASocket = require('@adiwajshing/baileys').default
 const { StringSession } = require('./lib');
 const { DataTypes } = require('sequelize');
 const git = simpleGit();
@@ -32,7 +33,7 @@ async function whatsAsena () {
     });
     
     
-    const conn = new WAConnection();
+    const conn = new makeWaSocket();
     const Session = new StringSession();
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
