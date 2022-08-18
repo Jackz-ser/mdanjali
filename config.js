@@ -27,7 +27,7 @@ module.exports = {
   DB_URL:process.env.DATABASE_URL,
   BRANCH: "main",
   AI : process.env.AI||false
-};
+
 function ToBool(text, fault = "true") {
   return text === fault ? true : false;
 }
