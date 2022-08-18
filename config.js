@@ -26,8 +26,8 @@ module.exports = {
   HEROKU_API_KEY: process.env.HEROKU_API_KEY||'23dfcbe6-d1a1-4b17-a94b-ce9c3dbbc9d7',
   DB_URL:process.env.DATABASE_URL,
   BRANCH: "main",
-  AI : process.env.AI||false
+  AI : process.env.AI||false,
   DATABASE_URL: DATABASE_URL,
   DATABASE: DATABASE_URL === './anjali.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-  DEBUG: DEBUG,
+  DEBUG: DEBUG
   };
