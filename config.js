@@ -8,7 +8,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 
-DATABASE_URL = process.env.DATABASE_URL === undefined ? './whatsasena.db' : process.env.DATABASE_URL;
+DATABASE_URL = process.env.DATABASE_URL === undefined ? './anjali.db' : process.env.DATABASE_URL;
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
@@ -31,3 +31,6 @@ module.exports = {
 function ToBool(text, fault = "true") {
   return text === fault ? true : false;
 }
+    DATABASE_URL: DATABASE_URL,
+    DATABASE: DATABASE_URL === './anjali.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
+    DEBUG: DEBUG,
