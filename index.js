@@ -77,8 +77,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         );
 
         console.log(
-            chalk.green.bold('Meenu mwol working' ));
-            };
+            chalk.green.bold('ANJALI MD working'));
+            });
           
       try {
         await conn.connect();
