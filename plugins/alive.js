@@ -18,4 +18,4 @@ module.exports = {
 	desc: "Is bot alive",
 	async mbb({msg, text, conn }) {
       await sendAlive(conn, msg, text);
-	};
+	}
