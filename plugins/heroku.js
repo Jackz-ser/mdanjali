@@ -43,15 +43,15 @@ module.exports = {
         break;
       case "setvar":
         {
-          if (!q) return msg.reply("setvar KEY:value");
+          if (!q) return msg.reply("_setvar KEY:value_");
           let [key, value] = q.split(":");
-          if (!key && !value) return msg.reply("setvar KEY:value");
+          if (!key && !value) return msg.reply("_setvar KEY:value_");
           await setvar(key, value);
-          msg.reply(`${key} : ${value}`);
+          msg.reply(`_${key} : ${value}_`);
         }
         break;
       case "delvar": {
-        if (!q) return msg.reply("delvar KEY");
+        if (!q) return msg.reply("_delvar KEY_");
 		heroku
 			.get(baseURI + '/config-vars')
 			.then(async (vars) => {
@@ -72,7 +72,7 @@ module.exports = {
       break
       case "getvar":
         {
-          if (!q) return msg.reply("getvar KEY");
+          if (!q) return msg.reply("_getvar KEY_");
           const key = q.trim().toUpperCase()
 		heroku
 			.get(baseURI + '/config-vars')
@@ -82,7 +82,7 @@ module.exports = {
 						'_{} : {}_'.replace('{}', key).replace('{}', vars[key])
 					)
 				}
-				await msg.reply(`${key} not found`)
+				await msg.reply(`_${key} not found_`)
 			})
 			.catch(async (error) => {
 				await msg.reply(`HEROKU : ${error.body.message}`)
@@ -107,7 +107,7 @@ module.exports = {
         break;
       case "restart":
         {
-          await msg.reply(`_Restarting_`)
+          await msg.reply(`_RESTARTING_`)
           await heroku.delete(baseURI + '/dynos').catch(async (error) => {
             await msg.reply(`HEROKU : ${error.body.message}`)
           })
@@ -119,7 +119,7 @@ module.exports = {
           await heroku
           .get(baseURI + '/formation')
           .then(async (formation) => {
-            await msg.reply(`_Shutting down._`)
+            await msg.reply(`_SHUTTING DOWN_`)
             await heroku.patch(baseURI + '/formation/' + formation[0].id, {
               body: {
                 quantity: 0,
