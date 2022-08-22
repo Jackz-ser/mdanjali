@@ -19,3 +19,4 @@ module.exports = {
 	async mbb({msg, text, conn }) {
       await sendAlive(conn, msg, text);
 	}
+}
