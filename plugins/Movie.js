@@ -4,11 +4,11 @@ module.exports = {
     alias :['imdb'],
 	category: "Tools",
 	desc: "Get Movie details",
-	query :'Enter text ',
+	query :'_ENTER A MOVIE NAME_ ',
 	async mbb({ msg,conn },{q}) {
         const response = await fetchJson(`http://www.omdbapi.com/?apikey=742b2d09&t=${q}&plot=full`);
         console.log(response)
-        if(response.Response=== 'False') return msg.reply('Movie not found!')
+        if(response.Response=== 'False') return msg.reply('*MOVIE NOT FOUND!*')
         
         let str = '';
         str += 'Title      : ' + response.Title + '\n\n';
