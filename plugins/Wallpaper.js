@@ -2,7 +2,7 @@ const {wallpaper} = require('../lib')
 module.exports = {
 	name: "wallpaper",
 	category: "Downloader",
-	desc: "Downloads Wallaper",
+	desc: "Downloads Wallpaper",
 	async mbb({ msg,conn},{q}) {
         wallpaper().then((data)=>{
             conn.sendMessage(msg.from,{image:{url:data}})
