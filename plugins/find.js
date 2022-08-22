@@ -27,21 +27,21 @@ Release : ${data.release_date}`
         {
           index: 1,
           urlButton: {
-            displayText: tiny("Play on youtube"),
+            displayText: ("PLAY ON YOUTUBE"),
             url: data.youtube,
           },
         },
         {
           index: 1,
           urlButton: {
-            displayText: tiny("Play on spotify"),
+            displayText: ("PLAY ON SPOTIFY"),
             url: data.spotify,
           },
         },
         {
           index: 2,
           quickReplyButton: {
-            displayText: "ᴅᴏᴡɴʟᴏᴀᴅ",
+            displayText: "DOWNLOAD",
             id: prefix+`ytmp3 ${data.youtube}`,
           },
         },
