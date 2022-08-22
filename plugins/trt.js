@@ -5,10 +5,10 @@ module.exports = {
     alias:['translate'],
     desc:"Translate",
     category: "Tools",
-    query:'Enter text to translate \nExample: text $ language \n language is optional',
+    query:'_ENTER A TEXT TO TRANSLATE_ \n _Example: text ; en',
     async mbb({ msg, conn },{q}) {
-    let [text,lang] = q.split('$')
-    lang = q.split('$')[1]||config.LANGUAGE
+    let [text,lang] = q.split(';')
+    lang = q.split(';')[1]||config.LANGUAGE
     trt(text, {from:'auto',to:lang}).then((s)=>{
        return msg.reply(s.text)
       })
