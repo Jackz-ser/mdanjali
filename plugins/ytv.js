@@ -4,7 +4,7 @@ module.exports = {
   alias: ["ytmp4", "ytvideo", "video", "youtube"],
   category: "Downloader",
   desc: "Youtube To Mp4",
-  query: "_Give an url_",
+  query: "_GIVE AN URL_",
   wait: true,
   isUrl: true,
   async mbb({ msg, conn }, { q }) {
