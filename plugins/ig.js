@@ -1,4 +1,4 @@
-const {igdl} = require('../lib')
+const {instagram} = require('../lib')
 module.exports = {
     name: "insta",
 	alias: ["instagram"],
@@ -9,7 +9,7 @@ module.exports = {
     wait: true,
     async mbb({msg,conn },{q}) {    
         if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
-        let url = await igdl(q)
+        let url = await instagram(q)
        let buff = await conn.getBuffer(url[0].url)
           await  conn.sendFile(msg.from, buff,'', "", msg,{quoted:msg})
     }
