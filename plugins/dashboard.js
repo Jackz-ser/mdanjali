@@ -6,6 +6,7 @@ module.exports = {
   desc: "display " + config.bot_name + " bot dashboard info",
   category: "info",
   isSpam: true,
+isOwner:true,
   wait: true,
   async mbb({ msg, conn }, { q, prefix, map }) {
     if (q) {
