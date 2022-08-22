@@ -11,7 +11,7 @@ conn.sendMessage({text: "I AM ALIVE"})
 }
 */
 
-const {sendAlive} = require('../lib')
+const { sendAlive } = require('../lib/index2')
 module.exports = {
 	name: "alive",
 	category: "misc",
