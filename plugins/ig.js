@@ -7,7 +7,6 @@ module.exports = {
     query:"_ENTER AN URL_",
     isUrl: true,
     wait: true,
-  }
     async mbb({msg,conn },{q}) {   
 try{
     if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
@@ -22,4 +21,4 @@ try{
   {
      await message.sendMessage("error")
   }
-});
+}});
