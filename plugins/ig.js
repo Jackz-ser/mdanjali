@@ -19,6 +19,6 @@ try{
   } 
   catch
   {
-     await message.sendMessage("error")
+     await msg.sendMessage("error")
   }
 }};
