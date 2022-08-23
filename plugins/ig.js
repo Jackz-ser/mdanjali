@@ -1,6 +1,4 @@
-
-const {fetchUrl} = require('../lib')
-const config = require('./config')
+const { igDownloader, igstalk } = require('../lib/scrapers')
 module.exports = {
     name: "insta",
 	alias: ["instagram"],
@@ -9,10 +7,17 @@ module.exports = {
     query:"_ENTER AN URL_",
     isUrl: true,
     wait: true,
-    async mbb({msg,conn },{q}) {    
-        if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
-        let fetch = await fetchUrl(`https://zenzapis.xyz/downloader/instagram=${url(text)[0]}&25a71023e0`)
-        for (let i of fetch.result) conn.sendFile(msg.from, i, "", msg, { caption: `Download Media From : ${url(text)[0]}` })
-       { quoted:msg }
-    }
-}
+    async mbb({msg,conn },{q}) {   
+try{
+    if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
+    await msg.sendMessage("_*DOWNLOADING...*_")
+    res = await igDownloader(match[1])
+    ytm = res.result
+    let buff = await conn.getBuffer(`${ytm.link}`)
+    const msg = `${ytm.link}`
+     if (msg.includes('.mp4')) { await conn.sendFile(msg.from, buff,", "",msg,{caption: `ANJALI`, quoted:msg})}
+     if (msg.includes('.jpg')) { await conn.sendFile(msg.from, buff,", "",msg,{caption: `ANJALI`, quoted:msg})}
+  } catch {
+     await message.sendMessage("error")
+  }
+});
