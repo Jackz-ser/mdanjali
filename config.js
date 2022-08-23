@@ -18,3 +18,8 @@ module.exports = {
 function ToBool(text, fault = "true") {
   return text === fault ? true : false;
 }
+{
+  "APIs": {
+    "zenz": "https://zenzapis.xyz",
+    "apikey": "YOURAPIKEY"
+  },
