@@ -10,7 +10,7 @@ module.exports = {
     async mbb({msg,conn },{q}) {   
 try{
     if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
-    await msg.sendMessage("_*DOWNLOADING...*_")
+    await conn.sendMessage("_*DOWNLOADING...*_")
     res = await igDownloader(match[1])
     ytm = res.result
     let buff = await conn.getBuffer(`${ytm.link}`)
@@ -19,6 +19,6 @@ try{
   } 
   catch
   {
-     await msg.sendMessage("error")
+     await conn.sendMessage("error")
   }
 }};
