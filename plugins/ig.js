@@ -15,8 +15,7 @@ try{
     ytm = res.result
     let buff = await conn.getBuffer(`${ytm.link}`)
     const msg = `${ytm.link}`
-     if (msg.includes('.mp4')) { await conn.sendFile(msg.from, buff,", "",msg,{caption: `ANJALI`, quoted:msg})}
-     if (msg.includes('.jpg')) { await conn.sendFile(msg.from, buff,", "",msg,{caption: `ANJALI`, quoted:msg})}
+    await conn.sendFile(msg.from, buff,", "",msg,{quoted:msg})}
   } catch {
      await message.sendMessage("error")
   }
