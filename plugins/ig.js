@@ -7,6 +7,7 @@ module.exports = {
     query:"_ENTER AN URL_",
     isUrl: true,
     wait: true,
+  }
     async mbb({msg,conn },{q}) {   
 try{
     if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
@@ -14,9 +15,11 @@ try{
     res = await igDownloader(match[1])
     ytm = res.result
     let buff = await conn.getBuffer(`${ytm.link}`)
-    const msg = `${ytm.link}`
-    await conn.sendFile(msg.from, buff, "", msg, {quoted:msg})}
-  } catch {
+    const insta = `${ytm.link}`
+    await conn.sendFile(msg.from, buff, "", msg, {quoted:msg})
+  } 
+  catch
+  {
      await message.sendMessage("error")
   }
 });
