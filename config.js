@@ -4,6 +4,7 @@ module.exports = {
   thumbImg: process.env.THUMBNAIL_IMAGE || "https://i.imgur.com/DfFk2Wx.jpeg",
   ownername: process.env.OWNER_NAME || "Neeraj-x0",
   prefix: process.env.PREFIX || ".",
+  MENU: process.env.MENU_BOT || "Anjali md;Jackz;918075641889;https://chat.whatsapp.com",
   logs: ToBool(process.env.LOG_MSG) || true,
   bot_name: process.env.BOT_NAME || "Millie-MD",
   timezone: process.env.TIME_ZONE || "Asia/Kolkata",
