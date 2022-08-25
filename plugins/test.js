@@ -8,7 +8,7 @@ module.exports = {
   var buttons = [{
     urlButton: {
         displayText: 'GITHUB',
-        url: 'https://github.com/souravkl11/raganork'
+        url: 'https://github.com/Jackz-ser'
     }
 }, {
   urlButton: {
