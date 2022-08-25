@@ -50,7 +50,7 @@ return await conn.sendMessage(
                                                               {
                                                               	video: { url: config.thumbvideo },
                                                                   caption: tiny(menu),buttons
-                                                                  gifPlayBack: true,
+                                                                  gifPlayback: true,
                                                                },
                                                                { quoted: msg ,adReply:true }
 			);
