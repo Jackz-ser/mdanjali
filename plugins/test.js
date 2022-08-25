@@ -4,7 +4,7 @@ const{tiny}=require('../lib')
 module.exports = {
   name: "give",
   category: "ignore",
-  async mbb ({ msg, conn}) {
+  async mbb({ msg, conn }) {
   var buttons = [{
     urlButton: {
         displayText: 'GITHUB',
@@ -55,12 +55,12 @@ return await conn.sendMessage(
                                         },
                                          { quoted: msg ,adReply:true }
 			
-			);
+			)};
 
 
 module.exports = {
   on: 'button',
- async mbb {(msg, conn)} {
+ async mbb({ msg, conn }) {
 var {button} = message
 if (button) {
   if (button.startsWith("commands")) return await msg.reply("Commands")
