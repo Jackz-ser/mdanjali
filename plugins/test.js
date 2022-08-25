@@ -46,13 +46,15 @@ var menu = `╭═══〘 ${MENU.split(";")[0]} 〙═══⊷❍
 ┃❉╰───────────────
 ╰═════════════════⊷`
 return await conn.sendMessage(
-                                                              msg.from,
-                                                              {
-                                                              	video: { url: config.thumbvideo },
-                                                                  caption: tiny(menu),buttons
-                                                                  gifPlayback: true,
-                                                               },
-                                                               { quoted: msg ,adReply:true }
+                                       msg.from,
+                                        {
+                                          video: { url: config.thumbvideo },
+                                          caption: tiny(menu),buttons,
+                                          gifPlayback: true,
+
+                                        },
+                                         { quoted: msg ,adReply:true }
+			
 			);
 }))
 
