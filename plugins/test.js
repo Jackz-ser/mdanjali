@@ -45,7 +45,7 @@ var menu = `╭═══〘 ${MENU.split(";")[0]} 〙═══⊷❍
 ┃❉│ 
 ┃❉╰───────────────
 ╰═════════════════⊷`
-return await conn.sendMessage(
+await conn.sendMessage(
                                        msg.from,
                                         {
                                           video: { url: config.thumbvideo },
@@ -56,7 +56,7 @@ return await conn.sendMessage(
                                          { quoted: msg ,adReply:true }
 			
 			);
-}
+};
 /*
 module.exports = {
   on: 'button',
@@ -68,4 +68,5 @@ if (button) {
   if (button.startsWith("support")) return await msg.reply(MENU.split(";")[3])
 } 
 }
+
 */
