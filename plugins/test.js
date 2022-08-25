@@ -55,9 +55,9 @@ return await conn.sendMessage(
                                         },
                                          { quoted: msg ,adReply:true }
 			
-			)};
-
-
+			);
+}
+/*
 module.exports = {
   on: 'button',
  async mbb({ msg, conn }) {
@@ -68,3 +68,4 @@ if (button) {
   if (button.startsWith("support")) return await msg.reply(MENU.split(";")[3])
 } 
 }
+*/
