@@ -56,7 +56,7 @@ return await conn.sendMessage(
                                          { quoted: msg ,adReply:true }
 			
 			);
-}))
+})
 
 module.exports = {
   on: 'button',
@@ -67,4 +67,4 @@ if (button) {
   if (button.startsWith("ping")) return await msg.reply(".ping")
   if (button.startsWith("support")) return await msg.reply(MENU.split(";")[3])
 } 
-}))
+})
