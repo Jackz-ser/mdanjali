@@ -1,3 +1,5 @@
+/*
+
 const { MENU } = require('../config')
 const{tiny}=require('../lib')
 
@@ -57,7 +59,7 @@ await conn.sendMessage(
 			
 			);
 }
-/*
+
 module.exports = {
   on: 'button',
  async mbb({ msg, conn }) {
