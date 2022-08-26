@@ -56,7 +56,7 @@ await conn.sendMessage(
                                          { quoted: msg ,adReply:true }
 			
 			);
-};
+}
 /*
 module.exports = {
   on: 'button',
