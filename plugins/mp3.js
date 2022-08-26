@@ -2,7 +2,7 @@ const { toAudio, mp3Meta, makeid } = require("../lib");
 const config = require('../config')
 module.exports = {
   name: "mp3",
-  alias: ["tomp3", "take"],
+  alias: ["tomp3"],
   category: "converter",
   desc: "Convert to Mp3",
   isQuoted: true,
