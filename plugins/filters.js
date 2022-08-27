@@ -18,7 +18,7 @@ async mbb({ msg, text, conn }) {
         }
     } else {
         if (match.length < 2) {
-            return await msg.reply("INCORRECT FORMAT  ```.filter "sa" "as"");
+            return await msg.reply("INCORRECT FORMAT");
         }
         await FilterDb.setFilter(msg.jid, match[0].replace(/['"“]+/g, ''), match[1].replace(/['"“]+/g, '') , match[0][0] === "'" ? true : false);
         await msg.reply("ADDED TO FILTER".replace('{}', match[0].replace(/['"]+/g, '')));
@@ -31,7 +31,7 @@ module.exports = {
 async mbb({ msg, text, conn }) {
     match = text.match(/[\'\"\"](.*?)[\'\"\"]/gsm);
     if (match === null) {
-        return await msg.reply("ENTER FILTER \n*Example:* ```.stop "hello"```")
+        return await msg.reply("ENTER FILTER")
     }
 
     del = await FilterDb.deleteFilter(msg.jid, match[0].replace(/['"“]+/g, ''));
