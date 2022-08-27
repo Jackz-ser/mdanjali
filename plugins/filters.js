@@ -4,7 +4,7 @@ const FilterDb = require('../lib/database/filters');
 module.exports = {
 name: "filter", 
 desc: "Make filters for chat",
-async mbb({ msg, text, conn }) => {
+async mbb({ msg, text, conn }) {
     match = text.match(/[\'\"\"](.*?)[\'\"\"]/gsm);
 
     if (match === null) {
@@ -28,7 +28,7 @@ async mbb({ msg, text, conn }) => {
 module.exports = {
  name: "stop",
  desc: "Stops a filter",
-async mbb ({msg, text, conn}) => {
+async mbb({ msg, text, conn }) {
     match = text.match(/[\'\"\"](.*?)[\'\"\"]/gsm);
     if (match === null) {
         return await msg.reply("ENTER FILTER \n*Example:* ```.stop "hello"```")
@@ -46,7 +46,7 @@ async mbb ({msg, text, conn}) => {
 
 module.exports = {
  on: 'text',
- async mbb({ msg, text, client }) => {
+ async mbb({ msg, text, conn }) {
     var filters = await FilterDb.getFilter(msg.jid);
     if (!filterer) return;
     filters.map(
