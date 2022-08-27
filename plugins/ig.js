@@ -15,7 +15,7 @@ try{
     ytm = res.result
     let buff = await conn.getBuffer(`${ytm.link}`)
     const insta = `${ytm.link}`
-    await conn.sendFile(msg.from, buff, "", msg, {quoted:msg})
+    await conn.sendFile(msg.from, buff, "", msg, { caption: `INSTA` ,quoted:msg})
   } 
   catch
   {
