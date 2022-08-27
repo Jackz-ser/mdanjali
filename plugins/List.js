@@ -32,8 +32,8 @@ module.exports = {
             let templateButtons = [
                 { urlButton: { displayText: "Source Code", url: "https://instgram.com/safxr._" } },
                 { urlButton: { displayText: "Main APIs", url: "http://zenzapis.xyz" } },
-                { quickReplyButton: { displayText: "ping", id: "${prefix} ping" } },
-                { quickReplyButton: { displayText: "Runtime", id: "${prefix} runtime" } },
+                { quickReplyButton: { displayText: "ping", id: `${prefix} ping` } },
+                { quickReplyButton: { displayText: "Runtime", id: `${prefix} runtime` } },
                 { quickReplyButton: { displayText: "Button 3", id: "nothing" } },
             ]
             
