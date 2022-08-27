@@ -23,7 +23,7 @@ async mbb({ msg, text, conn }) {
         await FilterDb.setFilter(msg.jid, match[0].replace(/['"“]+/g, ''), match[1].replace(/['"“]+/g, '') , match[0][0] === "'" ? true : false);
         await msg.reply("ADDED TO FILTER".replace('{}', match[0].replace(/['"]+/g, '')));
     }
-});
+};
 
 module.exports = {
  name: "stop",
@@ -41,7 +41,7 @@ async mbb({ msg, text, conn }) {
     } else {
         await message.reply("ALREADY DELETED")
     }
-});
+};
 
 
 module.exports = {
@@ -57,4 +57,4 @@ module.exports = {
             }
         }
     );
-});
+};
