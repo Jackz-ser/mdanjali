@@ -1,12 +1,3 @@
-const { Sequelize } = require('sequelize');
-const fs = require('fs');
-
-if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
-}
-const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : process.env.DATABASE_URL
-DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG)
 module.exports = {
   VERSION: 'v1.0.0',
   owner: process.env.SUDO || "918075641889,0",
@@ -25,10 +16,5 @@ module.exports = {
   DB_URL:process.env.DATABASE_URL,
   BRANCH: "main",
   AI : process.env.AI||false
-
-       DATABASE_URL: DATABASE_URL,
-       DATABASE:
-       DATABASE_URL === './database.db' ? new Sequelize({dialect: 'sqlite', storage: DATABASE_URL, logging: false,}) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: {native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false,}),
-       DEBUG: DEBUG
 };
 
