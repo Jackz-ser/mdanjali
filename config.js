@@ -6,7 +6,7 @@ module.exports = {
   ownername: process.env.OWNER_NAME || "Jackz",
   prefix: process.env.PREFIX || ".",
   MENU: process.env.MENU_BOT || "Anjali md;Jackz;918075641889;https://chat.whatsapp.com",
-  logs: convertToBool(process.env.LOG_MSG) || true,
+  logs: ToBool(process.env.LOG_MSG) || true,
   bot_name: process.env.BOT_NAME || "Anjali MD",
   timezone: process.env.TIME_ZONE || "Asia/Kolkata",
   locale: "in",
@@ -17,4 +17,7 @@ module.exports = {
   BRANCH: "main",
   AI : process.env.AI||false
 };
+function ToBool(text, fault = "true") {
+  return text === fault ? true : false;
+}
 
