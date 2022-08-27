@@ -47,3 +47,4 @@ module.exports = {
             conn.sendMessage(msg.from, templateMessage, { quoted: msg })
         }
     },
+}
