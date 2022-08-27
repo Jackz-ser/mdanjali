@@ -9,7 +9,7 @@ module.exports = {
             let data = []
             let name = q.toLowerCase()
             let { command, prefix } = map
-            let cmd = commands.get(name) || Array.from(commands.values()).find((v) => v.alias.includes(name))
+            let cmd = command.get(name) || Array.from(command.values()).find((v) => v.alias.includes(name))
             if (!cmd || cmd.type == "hidden") return msg.reply("No Command Found")
             else data.push(`*Name :* ${cmd.name.replace(/^\w/, c => c.toUpperCase())}`)
             if (cmd.alias) data.push(`*Alias :* ${cmd.alias.join(", ")}`)
@@ -20,10 +20,10 @@ module.exports = {
         } else {
             let teks = `Hello, ${msg.pushName} \nHere is the Command List\n\n`
 
-            for (let type of commands.type) {
+            for (let type of command.type) {
                 teks += `┌──⭓ *${toUpper(type)} Menu*\n`
                 teks += `│\n`
-                teks += `${commands.list[type].filter(v => v.type !== "hidden").map((cmd) => `│⭔ ${prefix + cmd.name} ${cmd.use ? " " + cmd.use : ""}`).join("\n")}\n`
+                teks += `${command.list[type].filter(v => v.type !== "hidden").map((cmd) => `│⭔ ${prefix + cmd.name} ${cmd.use ? " " + cmd.use : ""}`).join("\n")}\n`
                 teks += `│\n`
                 teks += `└───────⭓\n\n`
             }
@@ -38,7 +38,7 @@ module.exports = {
             ]
             
             let templateMessage = {
-                image: { url: config.thumbimage },
+                image: { url: config.thumbImg },
                 caption: teks,
                 footer: "List test",
                 templateButtons: templateButtons
