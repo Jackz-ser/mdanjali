@@ -1,4 +1,4 @@
-const { igDownloader, igstalk } = require('../lib/scrapers')
+const { igdl } = require('../lib/scrapers')
 module.exports = {
     name: "insta",
 	alias: ["instagram"],
@@ -11,11 +11,11 @@ module.exports = {
 try{
     if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
     await conn.sendMessage("_*DOWNLOADING...*_")
-    res = await igDownloader(match[1])
+    res = await igdl(match[1])
     ytm = res.result
     let buff = await conn.getBuffer(`${ytm.link}`)
     const insta = `${ytm.link}`
-    await conn.sendFile(msg.from, buff, "", msg, { caption: `INSTA` ,quoted:msg})
+    await conn.sendFile(msg.from, buff, "", msg, { quoted:msg })
   } 
   catch
   {
