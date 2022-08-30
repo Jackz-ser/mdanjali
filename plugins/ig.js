@@ -6,8 +6,17 @@ module.exports = {
 	desc: "Instagram Downloader",
     query:"_ENTER AN URL_",
     isUrl: true,
-    wait: true,
     async mbb({msg,conn },{q}) {   
+igdl(args[0]).then(async res => {
+    let igdl = JSON.stringify(res)
+    let json = JSON.parse(igdl)
+    await msg.reply("downloading")
+    for (let { downloadUrl, type } of json) {
+      conn.sendFile(msg.from, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), { quoted : msg })
+    )}}
+}
+
+/*
 try{
     if (!q.includes('www.instagram.com')) return msg.reply("*INVALID LINK*")
     await conn.sendMessage("_*DOWNLOADING...*_")
@@ -22,3 +31,4 @@ try{
      await conn.sendMessage("error")
   }
 }};
+*/
