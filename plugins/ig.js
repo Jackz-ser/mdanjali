@@ -11,7 +11,7 @@ module.exports = {
         if (!q.includes('www.instagram.com')) return msg.reply("Invalid Link")
         let url = await igdl(q)
        let buff = await conn.getBuffer(url[0].url)
-          await  conn.sendFile(msg.from, buff,'', "", msg,{quoted:msg})
+          await conn.sendFile(msg.from, buff,'', "", msg,{quoted:msg})
     }
 }
 
