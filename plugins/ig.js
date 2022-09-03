@@ -14,6 +14,7 @@ module.exports = {
         let json = JSON.parse(igdl)
         for (let { downloadUrl, type } of json) {
           conn.sendFile(msg.from, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), {quoted:msg})
+         }
     }
 }
 
