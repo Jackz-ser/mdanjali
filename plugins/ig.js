@@ -9,10 +9,12 @@ module.exports = {
     wait: true,
     async mbb({msg,conn },{q}) {    
         if (!q.includes('www.instagram.com')) return msg.reply("Invalid Link")
+     igdl(q).then(async res => {
         let igdl = JSON.stringify(res)
         let json = JSON.parse(igdl)
         for (let { downloadUrl, type } of json) {
           conn.sendFile(msg.from, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), {quoted:msg})
+            }
          }
     }
 }
