@@ -1,5 +1,5 @@
 `ANJALI MD`
-Multi device whatsapp bot made by Jackz from Millie base
+Multi device whatsapp bot made by Jackz 
 
 [SCAN](https://gomyre)
 
