@@ -1,22 +1,35 @@
-const { igdl } = require('../lib/scrapers')
+const {igdl} = require('../lib')
 module.exports = {
     name: "insta",
-	alias: ["instagram"],
+	alias: ["haha"],
 	category: "Downloader",
 	desc: "Instagram Downloader",
-    query:"_ENTER AN URL_",
+    query:"Give A url",
     isUrl: true,
     wait: true,
     async mbb({msg,conn },{q}) {    
         if (!q.includes('www.instagram.com')) return msg.reply("Invalid Link")
-     igdl(q).then(async res => {
-        let igdl = JSON.stringify(res)
-        let json = JSON.parse(igdl)
-        for (let { downloadUrl, type } of json) {
-          conn.sendFile(msg.from, downloadUrl, 'ig' + (type == 'image' ? '.jpg' : '.mp4'), {quoted:msg})
-            }
-        }
-    )}
+        let url = await igdl(q)
+       let buff = await conn.getBuffer(url[0].url)
+          await conn.sendFile(msg.from, buff,'', "", msg,{quoted:msg})
+    }
+}
+
+const {igdl} = require('../lib/scrapers')
+module.exports = {
+    name: "ig",
+	alias: ["hehe"],
+	category: "Downloader",
+	desc: "Instagram Downloader",
+    query:"Give A url",
+    isUrl: true,
+    wait: true,
+    async mbb({msg,conn },{q}) {    
+        if (!q.includes('www.instagram.com')) return msg.reply("Invalid Link")
+        let url = await igdl(q)
+       let buff = await conn.getBuffer(url[0].url)
+          await conn.sendFile(msg.from, buff,'', "", msg,{quoted:msg})
+    }
 }
 
 
