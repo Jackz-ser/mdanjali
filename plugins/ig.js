@@ -1,3 +1,4 @@
+/*
 const {igdl} = require('../lib')
 module.exports = {
     name: "insta",
@@ -33,7 +34,7 @@ module.exports = {
 }
 
 
-/*
+
 igdl(args[0]).then(async res => {
     let igdl = JSON.stringify(res)
     let json = JSON.parse(igdl)
