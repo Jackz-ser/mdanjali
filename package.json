@@ -12,6 +12,7 @@
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@neeraj-x0/textpro": "1.0.3",
+    "@bochilteam/scraper": "^2.0.0",
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
     "dotenv": "^8.2.0",
