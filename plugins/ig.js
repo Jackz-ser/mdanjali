@@ -25,6 +25,6 @@ let link = await getBuffer(i.url)
 
     }
 
-  }).catch((err) => sendReply(`*Sorry, server error*`))
+  }).catch((err) => conn.sendMessage(`*Sorry, server error*`))
 
   }		
